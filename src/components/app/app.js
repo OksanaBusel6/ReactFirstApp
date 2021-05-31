@@ -1,3 +1,11 @@
+/* Сгенерировать уникальный id готовым инструментом наподобие:
+https://www.npmjs.com/package/react-id-generator
+
+или более сложный вариант
+
+Создать вручную механизм генерации уникальных случайных id для постов (числовой, буквенный или смешанный - на ваш выбор) 
+ */
+
 import React, { Component } from "react";
 
 import AppHeader from "../app-header";
@@ -16,6 +24,7 @@ export default class App extends Component {
         { label: "Going to learn React", important: true, id: 1 },
         { label: "That is so good", important: false, id: 2 },
         { label: "I need a break...", important: false, id: 3 },
+        1,
       ],
     };
     this.deleteItem = this.deleteItem.bind(this);
