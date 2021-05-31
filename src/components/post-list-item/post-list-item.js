@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+
 import "./post-list-item.css";
 
 export default class PostListItem extends Component {
   constructor(props) {
     super(props);
-    const { like = false, important = false } = this.props;
     this.state = {
-      important,
-      like,
+      important: false,
+      like: false,
     };
     this.onImportant = this.onImportant.bind(this);
     this.onLike = this.onLike.bind(this);
@@ -46,19 +46,15 @@ export default class PostListItem extends Component {
         <div className="d-flex justify-content-center align-items-center">
           <button
             type="button"
-            className="btn btn-star btn-sm"
+            className="btn-star btn-sm"
             onClick={this.onImportant}
           >
-            <i className="fas fa-star"></i>
+            <i className="fa fa-star"></i>
           </button>
-          <button
-            type="button"
-            className="btn btn-trash btn-sm"
-            onClick={onDelete}
-          >
-            <i className="fas fa-trash"></i>
+          <button type="button" className="btn-trash btn-sm" onClick={onDelete}>
+            <i className="fa fa-trash"></i>
           </button>
-          <i className="fas fa-heart"></i>
+          <i className="fa fa-heart"></i>
         </div>
       </div>
     );
