@@ -19,6 +19,9 @@ export default class PostAddForm extends Component {
     e.preventDefault();
     const {text} = this.state;
     this.props.onAdd(text);
+    this.setState({
+      text: ''
+    });
   }
 
   render() {
@@ -32,6 +35,7 @@ export default class PostAddForm extends Component {
           placeholder="О чем Вы думаете сейчас?"
           className="form-control new-post-label"
           onChange={this.onValueChange}
+          value={this.state.text}
         />
         <button
           type="submit"
